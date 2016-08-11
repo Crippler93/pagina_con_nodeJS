@@ -1,0 +1,22 @@
+extends ../layout.jade
+block contenido
+	div(class="col-md-5 center-block quiter-float espacio-arriba text-left")
+		h1 -ADMINISTRADOR PRODUCTOS-
+		table(class="table")
+			thead
+				tr
+					th #
+					th Nombre
+					th Descripcion
+					th Precio
+					th Imagen
+					th Acciones
+			tbody
+				each product in products
+					tr
+						td= product.id
+						td= product.title
+						td= product.description
+						td= product.pricing
+						td #[a(class="btn btn-danger" href="#{product.imageUrl }") Ver imagen] 
+						td #[a(href="productos/edit/#{product.id}") Modificar] #[a(href="productos/delete/#{product.id}") Eliminar]

@@ -1,0 +1,9 @@
+extends ../layout.jade
+block contenido
+	h2(class="crema grande") Menú
+	p(class="mediano") Productos de calidad en tu mesa
+	each product in products
+		div(class="col-md-4 col-sm-6 col-xs-12 block-inline")
+			h3(class="small")= product.title
+			img(src="#{ product.imageUrl }" class="col-xs-7 col-md-4 quiter-float")
+			p(class="micro-espacios") #[small(class="small") #{product.pricing}USD ]

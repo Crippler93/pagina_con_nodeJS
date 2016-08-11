@@ -1,0 +1,10 @@
+extends ../layout.jade
+block contenido
+	div(class="col-md-5 center-block quiter-float espacio-arriba text-left")
+		h1 Ventana de Administrador
+		form(method="post" action="/admin" class="micro-espacios")
+			div(class="form-group")
+				label Contraseña
+				input(type="password" name="password", placeholder="Indroduzca su Contraseña" class="form-control")
+			div(class="form-group text-right")
+				input(type="submit" class="btn btn-info" value="Ingresar")
